@@ -209,7 +209,7 @@
                         <!-- Header Desktop -->
                         <div class="row mb-4 d-none d-md-flex">
                             <div class="col">
-                                <h2 id="pageTitle">Bienvenido, <span id="userNameDisplay">Dr. Usuario</span></h2>
+                                <h2 id="pageTitle">Bienvenido, <span id="userNameDisplay"></span></h2>
                             </div>
                             <div class="col-auto">
                                 <div class="dropdown">
@@ -228,7 +228,7 @@
                         <!-- Título móvil -->
                         <div class="row mb-4 d-md-none">
                             <div class="col">
-                                <h4 id="pageTitleMobile">Bienvenido, <span id="userNameDisplayMobile">Dr. Usuario</span></h4>
+                                <h4 id="pageTitleMobile">Bienvenido, <span id="userNameDisplayMobile"></span></h4>
                             </div>
                         </div>
                         

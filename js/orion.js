@@ -98,11 +98,13 @@ const config = {
                     method: 'POST',
                     body: JSON.stringify({ email, password, remember })
                 });
-                                console.log(response);
+                                console.log(response.pro_data);
                 if (response.success) {
                     appState.isLoggedIn = true;
                     appState.currentUser = response.user;
                     appState.token = response.token;
+                    appState.nombre = response.pro_data.nombre;
+                    appState.apellido = response.pro_data.apellido;
                     
                     // Guardar token si se marcó "recordar"
                     if (remember) {
@@ -747,7 +749,7 @@ const config = {
                                 <button class="btn btn-outline-primary" onclick="showSent()">
                                     <i class="bi bi-send-fill me-2"></i>Enviados
                                 </button>
-                                <button class="btn btn-success" onclick="showComposeModal()">
+                                <button class="btn btn-outline-success" onclick="showComposeModal()">
                                     <i class="bi bi-plus-circle me-2"></i>Nuevo Mensaje
                                 </button>
                             </div>
@@ -755,7 +757,7 @@ const config = {
                     </div>
                     
                     <div class="row">
-                        <div class="col-md-4">
+                        <div class="col-md-4 mt-2">
                             <div class="card">
                                 <div class="card-header">
                                     <h6 class="mb-0" id="messageListTitle">Mensajes Recibidos</h6>
@@ -768,7 +770,7 @@ const config = {
                             </div>
                         </div>
                         
-                        <div class="col-md-8">
+                        <div class="col-md-8 mt-2">
                             <div class="card">
                                 <div class="card-header">
                                     <h6 class="mb-0">Detalle del Mensaje</h6>
@@ -1129,12 +1131,13 @@ const config = {
 
         // Mostrar panel principal
         function showMainPanel() {
+            console.log("[appState]",appState)
             gebi('loginPage').classList.add('hidden');
             gebi('mainPanel').classList.remove('hidden');
             
-            if (appState.currentUser) {
-                gebi('userNameDisplay').textContent = appState.currentUser.name;
-                gebi('userNameDisplayMobile').textContent = appState.currentUser.name;
+            if (appState.pro_data) {
+                gebi('userNameDisplay').textContent = appState.apellido+' '+appState.nombre;
+                gebi('userNameDisplayMobile').textContent = appState.apellido+' '+appState.nombre;
             }
         }
 
