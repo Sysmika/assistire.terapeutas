@@ -1,0 +1,175 @@
+/* CSS Document */
+
+:root {
+  --bg-color: #ffffff;
+  --text-color: #000000;
+}
+
+body.theme-dark {
+  --bg-color: #121212;
+  --text-color: #ffffff;
+}
+
+body.theme-blue {
+  --bg-color: #e0f7fa;
+  --text-color: #004d40;
+}
+
+        body {
+          background-color: var(--bg-color);
+          color: var(--text-color);
+          transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+
+
+
+        #pageContent{
+            height: 85vh;
+            overflow-y: auto;
+            overflow-x: hidden;
+        }
+
+        .sidebar {
+            min-height: 100vh;
+            height: auto;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            transition: transform 0.3s ease;
+        }
+        
+        .sidebar .nav-link {
+            color: rgba(255, 255, 255, 0.8);
+            transition: all 0.3s ease;
+        }
+        
+        .sidebar .nav-link:hover,
+        .sidebar .nav-link.active {
+            color: white;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 8px;
+        }
+        
+        .main-content {
+            min-height: 100vh;
+            background-color: #f8f9fa;
+        }
+        
+        /* Navegación móvil */
+        .mobile-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 1rem;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        .mobile-nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 280px;
+            height: 100vh;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            transform: translateX(-100%);
+            transition: transform 0.3s ease;
+            z-index: 1100;
+            overflow-y: auto;
+        }
+        .mobile-nav-link{
+            color: #CCC;
+        }
+        .mobile-nav-link:hover{
+            color: white;
+        }
+        .mobile-nav.show {
+            transform: translateX(0);
+        }
+        
+        .mobile-nav-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 1050;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+        }
+        
+        .mobile-nav-overlay.show {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        /* Ocultar sidebar en móvil */
+        @media (max-width: 767.98px) {
+            .sidebar-desktop {
+                display: none !important;
+            }
+            
+            .main-content-mobile {
+                width: 100% !important;
+                padding: 0 !important;
+            }
+        }
+        
+        /* Mostrar sidebar solo en desktop */
+        @media (min-width: 768px) {
+            .mobile-header {
+                display: none !important;
+            }
+            
+            .mobile-nav {
+                display: none !important;
+            }
+        }
+        
+        .login-container {
+            min-height: 100vh;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        
+        .login-card {
+            backdrop-filter: blur(10px);
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+        }
+        
+        .patient-card {
+            transition: transform 0.2s ease;
+            border-left: 4px solid #0d6efd;
+        }
+        
+        .patient-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+        
+        .stats-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border-radius: 15px;
+        }
+        
+        .hidden {
+            display: none !important;
+        }
+        
+        .spinner-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.9);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+        }
+
+
