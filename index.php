@@ -148,8 +148,8 @@
                     <a href="#" class="nav-link mobile-nav-link" data-page="reports">
                         <i class="bi bi-graph-up me-2"></i>Reportes
                     </a>
-                    <a href="#" class="nav-link mobile-nav-link" data-page="message">
-                        <i class="bi bi-inbox-fill"></i>Comunicación
+                    <a href="#" class="nav-link mobile-nav-link" data-page="messages">
+                        <i class="bi bi-inbox-fill me-2"></i>Comunicación
                     </a>
                 </nav>
                 
@@ -190,11 +190,8 @@
                             <a href="#" class="nav-link desktop-nav-link" data-page="reports">
                                 <i class="bi bi-graph-up me-2"></i>Reportes
                             </a>
-                            <a href="#" class="nav-link desktop-nav-link" data-page="settings">
-                                <i class="bi bi-gear me-2"></i>Configuración
-                            </a>
                             <a href="#" class="nav-link desktop-nav-link" data-page="messages">
-                                <i class="bi bi-gear me-2"></i>Comunicación
+                                <i class="bi bi-inbox-fill me-2"></i>Comunicación
                             </a>
                         </nav>
                         

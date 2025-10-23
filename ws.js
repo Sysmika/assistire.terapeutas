@@ -1,8 +1,8 @@
 // JavaScript Document
 // Service Worker for MedApp PWA
-const CACHE_NAME = 'medapp-v1.0.2';
-const STATIC_CACHE_NAME = 'medapp-static-v1.0.2';
-const DYNAMIC_CACHE_NAME = 'medapp-dynamic-v1.0.2';
+const CACHE_NAME = 'medapp-v1.0.3';
+const STATIC_CACHE_NAME = 'medapp-static-v1.0.3';
+const DYNAMIC_CACHE_NAME = 'medapp-dynamic-v1.0.3';
 
 // Files to cache immediately
 const STATIC_FILES = [
